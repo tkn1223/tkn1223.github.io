@@ -20,29 +20,40 @@
       /* ヒーロースタイル */
       .full-hero {
         background-color: #c7dbfc;
-        height: 50vw;
+        height: 50vh;
       }
 
       /* SNSスタイル */
       .social-link {
         background-color: rgba(150, 150, 150, 0.5);
-        color: rgba(0, 26, 255);
+        border-radius: 99px;
+        box-sizing: border-box;
+        color: #fff;
         display: inline-block;
-        height: 36px;
-        margin: auto;
-        width: 50px;
+        font-family: helvetica, arial, sans;
+        font-size: 1em;
+        font-weight: bold;
+        height: 2.5em;
+        line-height: 1;
+        padding-top: 0.85em;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        width: 2.5em;
       }
       .social-list {
         list-style: none;
         padding: 0;
+        text-align: center;
       }
       .social-list > li {
         display: inline-block;
+        margin: 0 0.5em;
       }
       /* バイオグラフィースタイル */
       .bio-wrapper {
         font-size: 24px;
-        margin: 0 auto 10px;
+        margin: auto;
         max-width: 960px;
         overflow: hidden;
       }
@@ -51,12 +62,9 @@
         box-sizing: border-box;
         float: left;
         font-size: 1rem;
-        margin: 40px 1%;
-        padding: 0 2% 2%;
+        margin: 40px 1% 0;
+        padding: 2%;
         width: 23%;
-      }
-      .bio-box > a {
-        color: #c68bf9;
       }
       .bio-box h3 {
         color: #fff;
@@ -69,10 +77,10 @@
       }
       .bio-copy {
         font-size: 1em;
+        line-height: 1.5;
       }
       .bio-copy a {
         color: #080;
-        padding: 20px;
       }
     </style>
   </head>
@@ -81,13 +89,13 @@
         <h1>I'm an h1</h1>
         <ul class="social-list">
           <li>
-              <a href="https://example.com/" class="social-link">Link1</a>
+              <a href="https://example.com/" class="social-link">Fb</a>
           </li>
           <li>
-              <a href="https://example.com/" class="social-link">Link2</a>
+              <a href="https://example.com/" class="social-link">Tw</a>
           </li>
           <li>
-              <a href="https://example.com/" class="social-link">Link3</a>
+              <a href="https://example.com/" class="social-link">Gh</a>
           </li>
         </ul>
     </div>
@@ -96,7 +104,7 @@
       <div class="bio-box">
         <img src="https://railstutorial.jp/images/kitten.png">
         <h3>Michael Hartl</h3>
-        <a href="https://twitter.com/mhartl" class="social-link">here</a>
+        <a href="https://twitter.com/mhartl" class="social-link">Tw</a>
         <div class="bio-copy">
             <p>
                 Known for his dazzling charm, rapier wit, and unrivaled humility,
@@ -116,7 +124,7 @@
       <div class="bio-box">
         <img src="https://railstutorial.jp/images/kitten.png">
         <h3>Lee Donahoe</h3>
-        <a href="https://twitter.com/leedonahoe" class="social-link">here</a>
+        <a href="https://twitter.com/leedonahoe" class="social-link">Tw</a>
         <div class="bio-copy">
             <p>
                 When he's not literally swimming with sharks or hunting powder stashes on
@@ -129,7 +137,7 @@
       <div class="bio-box">
         <img src="https://railstutorial.jp/images/kitten.png">
         <h3>Nick Merwin</h3>
-        <a href="https://twitter.com/nickmerwin" class="social-link">here</a>
+        <a href="https://twitter.com/nickmerwin" class="social-link">Tw</a>
         <div class="bio-copy">
             <p>
                 You may have seen him shredding guitar live with Capital Cities on Jimmy
@@ -147,7 +155,7 @@
         </p>
       </div>
     </div>
-    <p style="clear:rigth;">
+    <p>
       Learn Enough to Be Dangerous is a leader in the movement to teach the
       world <em>technical sophistication</em>, which includes both "hard
       skills" like coding, command lines, and version control, and "soft
