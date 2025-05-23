@@ -1,13 +1,18 @@
 /* グローバルスタイル */
-h1 {
-    font-size: 7vw;
-    margin-top: 0;
+a {
+    color: #f00;
 }
 body {
     font-family: helvetica, arial, sans-serif;
+    background-color: rgb(213, 255, 255);
 }
-a {
-    color: #f00;
+html {
+    box-shadow: 0 0 0 30px #fff inset;
+    padding: 0 30px
+}
+h1 {
+    font-size: 7vw;
+    margin-top: 0;
 }
 h2 ~ p {
     font-size: 0.8em;
@@ -18,32 +23,50 @@ h2 ~ p {
 }
 
 /* ヘッダースタイル */
+.header {
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+}
+.header-logo {
+    box-sizing: border-box;
+    display: block;
+    left: -20px;
+    padding-left: 10px;
+    position: relative;
+    text-align: center;
+    width: 10vh;
+}
+.header-logo:hover,
+.header-logo:active {
+    opacity: 0.5;
+}
+.header-logo img {
+    width: 12vh;
+}
 .header-nav {
     float: right;
-    padding: 5.5vh 60px 0 0;
+    padding: 3.5vh 60px 0 0;
 }
 .header-nav > li {
     display: inline-block;
     margin-left: 1em;
 }
 .header-nav > li ~ li {
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 2px solid rgba(0, 0, 0, 0.3);
     padding-left: 1em;
 }
-.header-nav a {
+.nav-links a {
     color: #000;
     font-size: 0.8rem;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
 }
-.header-nav a:hover,
-.header-nav a:active {
+.nav-links a:hover,
+.nav-links a:active {
     color: #ed6e2f
-}
-.header-logo:hover,
-.header-logo:active {
-    opacity: 0.5;
 }
 .header-nav > li:first-child a {
     color: #ed6e2f;
@@ -52,10 +75,32 @@ h2 ~ p {
     color: #000;
 }
 
+/* フッタースタイル */
+.footer {
+    background-color: #ffffff;
+    padding: 3vh 0 6vh;
+    text-align: center;
+}
+.footer-logo img {
+    width: 12vh;
+}
+.footer h3 {
+    padding-top: 1.5em;
+    text-transform: uppercase;
+}
+.footer h3 span {
+    color: #838383;
+}
+.footer-nav li {
+    display: inline-block;
+    margin: 2em 1em 0;
+}
+
 /* ヒーロースタイル */
 .full-hero {
     background-color: #c7dbfc;
     height: 50vh;
+    position: relative;
 }
 
 /* SNSスタイル */
@@ -82,8 +127,11 @@ h2 ~ p {
     color: black;
 }
 .social-list {
+    bottom: 1em;
+    left: 1em;
     list-style: none;
     padding: 0;
+    position: absolute;
     text-align: center;
 }
 .social-list > li {
