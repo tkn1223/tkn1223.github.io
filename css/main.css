@@ -12,7 +12,6 @@ html {
 }
 h1 {
     font-size: 7vw;
-    margin-top: 0;
 }
 h2 ~ p {
     font-size: 0.8em;
@@ -78,6 +77,8 @@ h2 ~ p {
 /* フッタースタイル */
 .footer {
     background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
     padding: 3vh 0 6vh;
     text-align: center;
 }
@@ -94,13 +95,6 @@ h2 ~ p {
 .footer-nav li {
     display: inline-block;
     margin: 2em 1em 0;
-}
-
-/* ヒーロースタイル */
-.full-hero {
-    background-color: #c7dbfc;
-    height: 50vh;
-    position: relative;
 }
 
 /* SNSスタイル */
@@ -127,10 +121,9 @@ h2 ~ p {
     color: black;
 }
 .social-list {
-    bottom: 1em;
+    bottom: 0.1em;
     left: 1em;
     list-style: none;
-    padding: 0;
     position: absolute;
     text-align: center;
 }
@@ -138,6 +131,51 @@ h2 ~ p {
     display: inline-block;
     margin: 0 0.5em;
 }
+
+/* ヒーロースタイル */
+.full-hero {
+    background-color: #c7dbfc;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 100vh;
+    padding-top: 10vh;
+    position: relative;
+}
+.full-hero:after {
+    bottom: 2vh;
+    border: 10px solid;
+    border-color: #000000 transparent transparent;
+    content: "";
+    height: 0;
+    left: 5%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: 0;
+}
+.hero-home {
+    background-image: url(/images/me.jpg);
+    background-position: center top;
+}
+.hero-content {
+    bottom: 5%;
+    color: #313131;
+    position: absolute;
+    text-transform: uppercase;
+    right: 2%;
+}
+.hero-content h1 {
+    text-align: right;
+    padding-bottom: 0.9em;
+}
+.hero-content .social-link {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #557c83;
+}
+.hero-content .social-link:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 /* バイオグラフィースタイル */
 .bio-wrapper {
     font-size: 24px;
