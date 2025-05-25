@@ -3,8 +3,16 @@ a {
     color: #f00;
 }
 body {
-    font-family: helvetica, arial, sans-serif;
     background-color: rgb(213, 255, 255);
+    display: flex;
+    flex-direction: column;
+    font-family: helvetica, arial, sans-serif;
+    min-height: 100vh;
+}
+.content-container {
+    flex: 1 1 auto;
+    padding-top: 10vh;
+    width: 100%;
 }
 html {
     box-shadow: 0 0 0 30px #fff inset;
@@ -18,10 +26,11 @@ h2 {
     font-size: 2em;
 }
 a {
-color: #6397b5;
+    color: #6397b5;
 }
 p {
-line-height: 1.5;
+    line-height: 1.5;
+    margin: 0.75em 0;
 }
 h2 ~ p {
     font-size: 0.8em;
@@ -34,6 +43,7 @@ h2 ~ p {
 /* ヘッダースタイル */
 .header {
     background-color: #ffffff;
+    height: 80px;
     position: fixed;
     width: 100%;
     z-index: 20;
@@ -92,6 +102,11 @@ h2 ~ p {
     padding: 3vh 0 6vh;
     text-align: center;
 }
+.footer-col {
+    flex: 1;
+    padding: 0 1em;
+    /* text-align: left; */
+}
 .footer-logo img {
     width: 12vh;
 }
@@ -147,8 +162,7 @@ h2 ~ p {
     background-color: #c7dbfc;
     background-size: cover;
     box-sizing: border-box;
-    height: 100vh;
-    padding-top: 10vh;
+    height: 90vh;
     position: relative;
 }
 .full-hero:after {
@@ -197,18 +211,27 @@ h2 ~ p {
     text-align: center;
 }
 .home-callout {
+    align-items: center;
     background-color: #000;
     color: #fff;
+    display: flex;
     padding: 7vh 0;
 }
+.home-callout h3 {
+    color: inherit;
+    margin-top: 1em;
+}
 .callout-title {
+    flex: 1 1 0;
     font-size: 5.75vw;
     text-align: right;
     text-transform: uppercase;
   }
-  .callout-copy {
+.callout-copy {
+    flex: 0 0 45em;
     font-size: 0.8rem;
-  }
+    padding: 0 3vw;
+}
 
 /* バイオグラフィースタイル */
 .bio-wrapper {
